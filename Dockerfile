@@ -1,11 +1,11 @@
-FROM frolvlad/alpine-pysthon-machinelearning
-RUN pip install --upgrade pip # Because already python is installed in the environment from the base image 
+FROM frolvlad/alpine-python-machinelearning
+RUN pip install --upgrade pip 
 
 WORKDIR /app
 
 COPY . /app
 
-RUN pip install - requirement.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 4000
 
